@@ -70,6 +70,22 @@ namespace Server
             )]
 
         string EgySzendvicsDelete(int id);
+
+
+        [OperationContract]
+
+        String EgySzendvicsGetListCS();
+
+        [OperationContract]
+
+        [WebInvoke(Method = "GET",
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json,
+            BodyStyle = WebMessageBodyStyle.WrappedRequest,
+            UriTemplate = "/EgySzendvicsGetList"
+            )]
+
+        String EgySzendvicsGetList();
     }
 
     [DataContract]

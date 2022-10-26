@@ -114,5 +114,17 @@ namespace Server
         {
             return EgySzendvicsGetCS();
         }
+
+        static List<Szedvics> SzendvicsLista = new List<Szedvics>();
+        public string EgySzendvicsGetListCS()
+        {
+            Szedvics szl=new Szedvics();
+            szl.Id= szl.Id;
+        }
+
+        public string EgySzendvicsGetList()
+        {
+            return EgySzendvicsGetListCS();
+        }
     }
 }
