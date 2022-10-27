@@ -115,11 +115,19 @@ namespace Server
             return EgySzendvicsGetCS();
         }
 
-        static List<Szedvics> SzendvicsLista = new List<Szedvics>();
         public string EgySzendvicsGetListCS()
         {
-            Szedvics szl=new Szedvics();
-            szl.Id= szl.Id;
+            var ertek = "";
+            //for (int i = 0; i < SzendvicsekListaja.Count; i++)
+            //{
+            //    ertek=SzendvicsekListaja[i].ToString();
+            //}
+
+            foreach (var item in SzendvicsekListaja)
+            {
+                ertek = item.Id + " " + item.HusFeltet + " " + item.PekaruTipusa + " " + item.SzalamiKarikakSzama + " " + item.Szalveta + " " + item.Vaj + " " + item.ZoldsegFeltet;
+            }
+            return ertek;
         }
 
         public string EgySzendvicsGetList()
