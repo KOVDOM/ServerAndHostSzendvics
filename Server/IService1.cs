@@ -74,7 +74,7 @@ namespace Server
 
         [OperationContract]
 
-        String EgySzendvicsGetListCS();
+        List<Szedvics> EgySzendvicsGetListCS();
 
         [OperationContract]
 
@@ -85,7 +85,7 @@ namespace Server
             UriTemplate = "/EgySzendvicsGetList"
             )]
 
-        String EgySzendvicsGetList();
+        List<Szedvics> EgySzendvicsGetList();
     }
 
     [DataContract]
